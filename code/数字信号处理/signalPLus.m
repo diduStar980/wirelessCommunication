@@ -1,0 +1,16 @@
+dt=0.01;
+f1=1;
+f2=10;
+n1=0:500;
+t=n1*dt;
+x1=sin(2*pi*f1*t);
+x2=0.2*sin(2*pi*f2*t);
+subplot(3,1,1),plot(t,x1);
+title('第一个信号');
+subplot(3,1,2),plot(t,x2);
+title('第二个信号');
+y=x1+x2;
+%%[y,n]=sigadd(x1,n1,x2,n2)
+subplot(3,1,3),plot(t,y);
+title('合成信号');
+xlabel('时间/s')
