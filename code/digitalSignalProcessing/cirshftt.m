@@ -1,4 +1,4 @@
-function y = cirshift(x,m,N)
+function y = cirshftt(x,m,N)
 if length(x)>N
     error('N must >=the length of x')
 end
