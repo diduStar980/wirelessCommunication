@@ -1,2 +1,4 @@
 # wirelessCommunication
-none
+关于无线通信的学习，目标是在明年3月份之前能够找到一份相关的工作。
+
+主要是无线通信知识的学习以及matlab代码。关于FPGA的部分在另一个仓库中。
