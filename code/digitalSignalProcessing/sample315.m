@@ -1,0 +1,22 @@
+clf;
+fs=1000;N=1024;
+n=0:N-1;t=n/fs;
+f1=50;f2=120;
+x=sin(2*pi*f1*t)+2*sin(pi*f2*t);
+x=x+2*randn(1,length(t));
+y=fft(x,N);
+mag=abs(y);
+f=n*fs/N;
+subplot(2,1,1),plot(f(1:N/2),mag(1:N/2)*2/N);
+xlabel('频率/Hz');
+ylabel('振幅');
+title('N=1024');grid on;
+
+x=sin(2*pi*f1*t)+2*sin(pi*f2*t);
+y=fft(x,N);
+mag=abs(y);
+f=n*fs/N;
+subplot(2,1,2),plot(f(1:N/2),mag(1:N/2)*2/N);
+xlabel('频率/Hz');
+ylabel('振幅');
+title('N=1024 无噪声');grid on;
